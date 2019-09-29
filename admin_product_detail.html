@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style layout-fixed layout-footer-fixed">
+
+<head>
+  <title>Product list - Pages - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Page 1 - HTML Starter</title>
+
+  <!-- Main font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css"> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css"> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css"> -->
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/vendor/css/appwork.css">
+  <link rel="stylesheet" href="assets/vendor/css/theme-twitlight.css">
+  <link rel="stylesheet" href="assets/vendor/css/colors.css">
+  <link rel="stylesheet" href="assets/vendor/css/uikit.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>
+    document['documentMode'] === 10 && document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')
+  </script>
+
+  <!-- Layout helpers -->
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- PACE.js loader -->
+  <script src="assets/vendor/js/pace.js"></script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" href="assets/vendor/libs/select2/select2.css">
+  <link rel="stylesheet" href="assets/vendor/libs/quill/typography.css">
+  <link rel="stylesheet" href="assets/vendor/libs/quill/editor.css">
+  <link rel="stylesheet" href="assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.css">
+  <link rel="stylesheet" href="assets/vendor/libs/dragula/dragula.css">
+  <link rel="stylesheet" href="assets/vendor/libs/bootstrap-duallistbox/bootstrap-duallistbox.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="assets/vendor/css/pages/products.css">
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="assets/custom/css/custom.css">
+</head>
+
+<body>
+
+  <!-- PACE.js loader -->
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-1">
+    <!-- Layout inner -->
+    <div class="layout-inner">
+
+      <!-- Layout navbar -->
+      <nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+        <a href="#" class="navbar-brand">The Project Admin</a>
+
+        <!-- Sidenav toggle -->
+        <div class="layout-sidenav-toggle navbar-nav align-items-lg-center mr-auto mr-lg-4">
+          <a class="nav-item nav-link px-0 ml-2" href="javascript:void(0)">
+            <i class="ion ion-md-menu text-large align-middle"></i>
+          </a>
+        </div>
+
+        <!-- Navbar toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#layout-navbar-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="layout-navbar-collapse" style="">
+          <!-- Divider -->
+          <hr class="d-lg-none w-100 my-2">
+
+          <div class="navbar-nav align-items-lg-center">
+            <!-- Search -->
+            <label class="nav-item navbar-text navbar-search-box p-0 active">
+              <i class="ion ion-ios-search navbar-icon align-middle"></i>
+              <span class="navbar-search-input pl-2">
+                <input type="text" class="form-control navbar-text mx-2" placeholder="Search..." style="width:200px">
+              </span>
+            </label>
+          </div>
+
+          <div class="navbar-nav align-items-lg-center ml-auto">
+
+            <!-- Divider -->
+            <div class="nav-item d-none d-lg-block text-big font-weight-light line-height-1 opacity-25 mr-3 ml-1">|</div>
+
+            <div class="demo-navbar-user nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
+                  <img src="assets/img/avatars/1.png" alt="" class="d-block ui-w-30 rounded-circle">
+                  <span class="px-1 mr-lg-2 ml-2 ml-lg-0">관리자</span>
+                </span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="javascript:void(0)" class="dropdown-item"><i class="ion ion-ios-person text-lightest"></i> &nbsp; 비밀번호 변경</a>
+                <div class="dropdown-divider"></div>
+                <a href="javascript:void(0)" class="dropdown-item"><i class="ion ion-ios-log-out text-danger"></i> &nbsp; Log Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </nav>
+      <!-- / Layout navbar -->
+
+      <div class="layout-container">
+
+        <!-- Layout sidenav -->
+        <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+          <ul class="sidenav-inner py-1">
+            <li class="sidenav-item open active">
+              <a href="admin_product_list.html" class="sidenav-link sidenav-toggle"><i class="sidenav-icon ion ion-ios-apps"></i>
+                <div>캠페인 관리</div>
+              </a>
+
+              <ul class="sidenav-menu">
+                <li class="sidenav-item active">
+                  <a href="admin_product_list.html" class="sidenav-link">
+                    <div>제품 관리</div>
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="admin_campaign_list.html" class="sidenav-link">
+                    <div>캠페인 관리</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidenav-item">
+              <a href="#" class="sidenav-link"><i class="sidenav-icon ion ion-ios-stats"></i>
+                <div>통계</div>
+              </a>
+            </li>
+            <li class="sidenav-item">
+              <a href="#" class="sidenav-link"><i class="sidenav-icon ion ion-ios-calculator"></i>
+                <div>정산</div>
+              </a>
+            </li>
+            <li class="sidenav-item">
+              <a href="admin_board_article_list.html" class="sidenav-link sidenav-toggle"><i class="sidenav-icon ion ion-ios-list-box"></i>
+                <div>게시판</div>
+              </a>
+              <ul class="sidenav-menu">
+                <li class="sidenav-item">
+                  <a href="admin_board_article_list.html" class="sidenav-link">
+                    <div>공지사항</div>
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="admin_board_article_list.html" class="sidenav-link">
+                    <div>자주묻는질문</div>
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="admin_board_article_list.html" class="sidenav-link">
+                    <div>이벤트</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidenav-item">
+              <a href="javascript:void(0)" class="sidenav-link sidenav-toggle"><i class="sidenav-icon ion ion-ios-settings"></i>
+                <div>시스템 관리</div>
+              </a>
+
+              <ul class="sidenav-menu">
+                <li class="sidenav-item">
+                  <a href="admin_member_adv_list.html" class="sidenav-link">
+                    <div>회원 관리 - 광고주</div>
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="admin_member_inf_list.html" class="sidenav-link">
+                    <div>회원 관리 - 인플루언서</div>
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="admin_board_list.html" class="sidenav-link">
+                    <div>게시판 관리</div>
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="layouts_layout-1.html" class="sidenav-link sidenav-toggle">
+                    <div>코드 관리</div>
+                  </a>
+
+                  <ul class="sidenav-menu">
+                    <li class="sidenav-item">
+                      <a href="admin_code_grp_list.html" class="sidenav-link">
+                        <div>코드 그룹 관리</div>
+                      </a>
+                    </li>
+                    <li class="sidenav-item">
+                      <a href="admin_code_val_list.html" class="sidenav-link">
+                        <div>코드 값 관리</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidenav-item">
+                  <a href="admin_menu_detail.html" class="sidenav-link">
+                    <div>메뉴 관리</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- / Layout sidenav -->
+
+        <div class="layout-content">
+
+          <!-- Content -->
+          <div class="container-fluid flex-grow-1 container-p-y">
+
+            <h4 class="font-weight-bold py-3 mb-4">
+              제품관리 <span class="text-muted">#DJFIOW029</span>
+            </h4>
+
+            <div class="nav-tabs-top nav-responsive-sm">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#item-info">제품 정보</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#item-images">제품 이미지</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <!-- Basic info -->
+                <div class="tab-pane fade show active" id="item-info">
+
+                  <div class="card-body">
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">제품코드</label>
+                      <input type="text" class="form-control" value="DJFIOW029">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">브랜드 명</label>
+                      <input type="text" class="form-control" value="Samsung Galaxy">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">제품 명</label>
+                      <input type="text" class="form-control" value="Samsung Galaxy S7 Edge">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">가격</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">₩</div>
+                        </div>
+                        <input type="number" class="form-control" value="1690000">
+                      </div>
+                    </div>
+
+                    <div class="form-group bold">
+                      <label class="form-label font-weight-bold">카테고리</label>
+                      <select class="custom-select">
+                        <option selected>IT</option>
+                        <option>의류</option>
+                        <option>화장품</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">소유 광고주</label>
+                      <div class="card-body">
+                        <select multiple="multiple" size="10" id="duallistbox-example">
+                          <option value="option1">(주)인플 / 123-2395-201</option>
+                          <option value="option2">(주)좋은사람들 / 83-29398-294</option>
+                          <option value="option3" selected="selected">(주)삼성 / 759-02835-312</option>
+                          <option value="option4">5SECONDS / 123-123-123</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">판매페이지 URL</label>
+                      <input type="text" class="form-control" value="http://cafe24.com/shoppingmall/ASD">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label font-weight-bold">판매 기간</label>
+                      <input type="text" id="sellRange" name="sellRange" class="product-discount-period form-control" onkeydown="return false" value="2019-09-06 - 2020-09-06" />
+                    </div>
+
+                  </div>
+                </div>
+                <!-- / Basic info -->
+
+                <!-- Images -->
+                <div class="tab-pane fade" id="item-images">
+                  <div class="card-body">
+
+                    <div id="product-images">
+
+                      <div class="media align-items-center bg-white ui-bordered py-3 mb-2">
+                        <div class="product-image-move ion ion-ios-move text-muted text-big p-4"></div>
+                        <a href="javascript:void(0)" class="d-block ui-w-100 mr-4">
+                          <img src="assets/img/uikit/s7edge-1.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="media-body">
+                          <input type="text" value="example.com/assets/img/products/s7edge-1.jpg" class="form-control form-control-sm bg-transparent border-light mb-2" readonly>
+                          <label class="switcher switcher-sm">
+                            <input type="radio" name="product-primary-image" class="switcher-input" checked>
+                            <span class="switcher-indicator">
+                              <span class="switcher-yes"></span>
+                              <span class="switcher-no"></span>
+                            </span>
+                            <span class="switcher-label">대표 이미지</span>
+                          </label>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger borderless icon-btn d-block mx-4"><i class="ion ion-md-close"></i></button>
+                      </div>
+
+                      <div class="media align-items-center bg-white ui-bordered py-3 mb-2">
+                        <div class="product-image-move ion ion-ios-move text-muted text-big p-4"></div>
+                        <a href="javascript:void(0)" class="d-block ui-w-100 mr-4">
+                          <img src="assets/img/uikit/s7edge-2.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="media-body">
+                          <input type="text" value="example.com/assets/img/products/s7edge-2.jpg" class="form-control form-control-sm bg-transparent border-light mb-2" readonly>
+                          <label class="switcher switcher-sm">
+                            <input type="radio" name="product-primary-image" class="switcher-input">
+                            <span class="switcher-indicator">
+                              <span class="switcher-yes"></span>
+                              <span class="switcher-no"></span>
+                            </span>
+                            <span class="switcher-label">대표 이미지</span>
+                          </label>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger borderless icon-btn d-block mx-4"><i class="ion ion-md-close"></i></button>
+                      </div>
+
+                      <div class="media align-items-center bg-white ui-bordered py-3 mb-2">
+                        <div class="product-image-move ion ion-ios-move text-muted text-big p-4"></div>
+                        <a href="javascript:void(0)" class="d-block ui-w-100 mr-4">
+                          <img src="assets/img/uikit/s7edge-3.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="media-body">
+                          <input type="text" value="example.com/assets/img/products/s7edge-3.jpg" class="form-control form-control-sm bg-transparent border-light mb-2" readonly>
+                          <label class="switcher switcher-sm">
+                            <input type="radio" name="product-primary-image" class="switcher-input">
+                            <span class="switcher-indicator">
+                              <span class="switcher-yes"></span>
+                              <span class="switcher-no"></span>
+                            </span>
+                            <span class="switcher-label">대표 이미지</span>
+                          </label>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger borderless icon-btn d-block mx-4"><i class="ion ion-md-close"></i></button>
+                      </div>
+
+                      <div class="media align-items-center bg-white ui-bordered py-3 mb-2">
+                        <div class="product-image-move ion ion-ios-move text-muted text-big p-4"></div>
+                        <a href="javascript:void(0)" class="d-block ui-w-100 mr-4">
+                          <img src="assets/img/uikit/s7edge-4.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="media-body">
+                          <input type="text" value="example.com/assets/img/products/s7edge-4.jpg" class="form-control form-control-sm bg-transparent border-light mb-2" readonly>
+                          <label class="switcher switcher-sm">
+                            <input type="radio" name="product-primary-image" class="switcher-input">
+                            <span class="switcher-indicator">
+                              <span class="switcher-yes"></span>
+                              <span class="switcher-no"></span>
+                            </span>
+                            <span class="switcher-label">대표 이미지</span>
+                          </label>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger borderless icon-btn d-block mx-4"><i class="ion ion-md-close"></i></button>
+                      </div>
+
+                    </div>
+
+                    <button type="button" class="btn btn-outline-primary mt-3"><i class="ion ion-md-cloud-upload"></i>&nbsp; 이미지 업로드</button>
+
+                  </div>
+                </div>
+                <!-- / Images -->
+
+              </div>
+            </div>
+
+            <div class="text-right mt-3">
+              <button type="button" class="btn btn-default">취소</button>
+              <button type="button" class="btn btn-primary">저장</button>
+            </div>
+
+          </div>
+          <!-- / Content -->
+
+          <!-- Layout footer -->
+          <nav class="layout-footer footer bg-footer-theme">
+            <div class="container-fluid container-p-x pb-3">
+              <a href="#" class="footer-link pt-3">Link 1</a>
+              <a href="#" class="footer-link pt-3 ml-4">Link 2</a>
+            </div>
+          </nav>
+          <!-- / Layout footer -->
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Layout inner -->
+
+    <div class="layout-overlay layout-sidenav-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/js/sidenav.js"></script>
+
+  <!-- Libs -->
+
+  <!-- `perfect-scrollbar` library required by SideNav plugin -->
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/vendor/libs/select2/select2.js"></script>
+  <script src="assets/vendor/libs/moment/moment.js"></script>
+  <script src="assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.js"></script>
+  <script src="assets/vendor/libs/dragula/dragula.js"></script>
+  <script src="assets/vendor/libs/bootstrap-duallistbox/bootstrap-duallistbox.js"></script>
+
+  <!-- Demo -->
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/custom/js/admin_product_detail.js"></script>
+
+</body>
+
+</html>
