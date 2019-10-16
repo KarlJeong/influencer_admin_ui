@@ -5,7 +5,7 @@ $(function () {
   var $image = $('#cropper-example-image');
   var $download = $('#cropper-example-download');
   var options = {
-    aspectRatio: 16 / 9,
+    aspectRatio: 1,
     preview: '.cropper-example-preview',
     crop: function (e) {
       $('#cropper-example-dataX').val(Math.round(e.detail.x));
